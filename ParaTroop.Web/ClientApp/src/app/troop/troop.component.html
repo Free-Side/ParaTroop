@@ -1,0 +1,35 @@
+<div id="troop_page_contents" *ngIf="troop; else loading">
+  <as-split unit="pixel" direction="vertical" fxFlex="1 0 auto">
+    <as-split-area size="*" minSize="300" fxLayout="column">
+      <div id="troop_toolbar" fxFlex="0 0 auto" fxLayout="row" fxLayoutGap="0.5em">
+        <button (click)="runAll()" class="toolbar-button run-button" title="Run all">
+          <span>Run</span>
+          <mat-icon>play_arrow</mat-icon>
+        </button>
+        <button (click)="runSelection()" class="toolbar-button run-selection-button" title="Run selection">
+          <span>Run Selection</span>
+          <mat-icon>playlist_play</mat-icon>
+        </button>
+        <button (click)="stop()" class="toolbar-button stop-button" title="Stop">
+          <span>Stop</span>
+          <mat-icon>stop</mat-icon>
+        </button>
+      </div>
+      <div id="text_editor_container" #textEditorContainer fxFlex="1 1 auto">
+        <ngx-codemirror
+          [(ngModel)]="document"
+          [options]="{ lineNumbers: true, theme: 'sonic-pi', mode: 'ruby', styleActiveLine: true, autoCloseBrackets: true, matchBrackets: true }"
+          #textEditor>
+        </ngx-codemirror>
+        <!-- used to inject show-hint css -->
+        <app-code-mirror-show-hint></app-code-mirror-show-hint>
+      </div>
+    </as-split-area>
+    <as-split-area size="269">
+      <app-sonic-pi-help></app-sonic-pi-help>
+    </as-split-area>
+  </as-split>
+</div>
+<ng-template #loading>
+  Loading ...
+</ng-template>

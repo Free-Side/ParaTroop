@@ -1,0 +1,58 @@
+@import '/src/_variables';
+
+::ng-deep .CodeMirror {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: unset;
+  width: unset;
+}
+
+::ng-deep .peer-position {
+  display: inline-block;
+  position: absolute;
+  height: calc(100% - 2px);
+  width: 4px;
+  margin-left: -3px;
+  opacity: 0.6;
+  cursor: context-menu;
+}
+
+#troop_page_contents {
+  height: 100%;
+}
+
+#troop_toolbar {
+  padding: 0.5em;
+
+  .toolbar-button {
+    color: white;
+    border: none;
+    background-color: unset;
+  }
+
+  .toolbar-button span:first-child {
+    background-color: $primary;
+    display: inline-block;
+    padding-left: 0.5em;
+    padding-right: 1.5em;
+    line-height: 24px;
+    font-family: monospace;
+  }
+
+  .toolbar-button mat-icon {
+    background: $primary-lighten;
+    margin-left: 2px;
+    vertical-align: bottom
+  }
+
+  .toolbar-button.run-button mat-icon {
+    color: $accent;
+  }
+}
+
+#text_editor_container {
+  position: relative;
+}

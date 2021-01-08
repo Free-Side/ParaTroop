@@ -1,0 +1,4 @@
+pkg/
+temp/
+!bin/
+sonic-pi-doc-gen-*.gem

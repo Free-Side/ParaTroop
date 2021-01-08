@@ -1,0 +1,45 @@
+@import '~codemirror/lib/codemirror.css';
+@import '~codemirror/theme/material.css';
+@import 'sonic-pi-theme.css';
+
+html, body {
+  height: 100%;
+}
+
+app-root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+}
+
+body div.container {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+app-troop {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #ff4081;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}

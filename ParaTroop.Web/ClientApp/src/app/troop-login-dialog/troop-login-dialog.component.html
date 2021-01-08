@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Log In to {{troop.name}}</h1>
+<div mat-dialog-content>
+  <form (ngSubmit)="login()" (keydown)="loginOnEnter($event)">
+    <mat-form-field>
+      <mat-label>Username</mat-label>
+      <input matInput name="username" placeholder="Your Name" [(ngModel)]="username" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput name="password" [type]="hidePassword ? 'password' : 'text'" [(ngModel)]="password" />
+      <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hidePassword">
+        <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+    <div>
+      <button (click)="cancel()" mat-raised-button>Cancel</button>
+      <button (click)="login()" mat-raised-button color="accent">Login</button>
+    </div>
+  </form>
+</div>

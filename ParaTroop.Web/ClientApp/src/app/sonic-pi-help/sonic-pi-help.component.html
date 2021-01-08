@@ -1,0 +1,36 @@
+<div id="sonic_pi_help_panel" fxLayout="row">
+  <div id="help_list">
+    <mat-tab-group headerPosition="below" mat-align-tabs="center">
+      <mat-tab label="Synths">
+        <mat-selection-list [multiple]="false" (selectionChange)="showSelectedSynth($event)">
+          <mat-list-option *ngFor="let synth of documentation.allSynths" [value]="synth">
+            {{ synth }}
+          </mat-list-option>
+        </mat-selection-list>
+      </mat-tab>
+      <mat-tab label="Fx">
+        <mat-selection-list [multiple]="false" (selectionChange)="showSelectedFx($event)">
+          <mat-list-option *ngFor="let fx of documentation.allFx" [value]="fx">
+            {{ fx }}
+          </mat-list-option>
+        </mat-selection-list>
+      </mat-tab>
+      <mat-tab label="Samples">
+        <mat-selection-list [multiple]="false" (selectionChange)="showSelectedSamples($event)">
+          <mat-list-option *ngFor="let sample of documentation.allSamples" [value]="sample">
+            {{ sample }}
+          </mat-list-option>
+        </mat-selection-list>
+      </mat-tab>
+      <mat-tab label="Lang">
+        <mat-selection-list [multiple]="false" (selectionChange)="showSelectedFn($event)">
+          <mat-list-option *ngFor="let fn of documentation.allLang" [value]="fn">
+            {{ fn }}
+          </mat-list-option>
+        </mat-selection-list>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+  <div id="help_container" #helpContainer>
+  </div>
+</div>

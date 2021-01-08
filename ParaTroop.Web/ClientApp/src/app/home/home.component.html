@@ -1,0 +1,22 @@
+<p>
+  Welcome to ParaTroop, a browser based app for collaborative coding with Troop. Currently this site is designed specifically for use with <a href="https://sonic-pi.net/">Sonic Pi</a>.
+</p>
+<p>
+  <a [routerLink]="['/troops']" mat-raised-button color="accent">Find an Existing Troop</a>
+</p>
+<section>
+  <h2>Getting Started</h2>
+  <p>
+    To use ParaTroop to collaboratively edit a buffer to be played with <a href="https://sonic-pi.net/">Sonic Pi</a> one person will have to set up the Troop as follows:
+  </p>
+  <ol>
+    <li>Run Sonic Pi Locally</li>
+    <li><a href="https://github.com/Qirky/Troop#running-the-troop-server">Run the Troop Server Locally</a></li>
+    <li>Ensure your Troop Server Port (default: 57890) is open to the internet (not blocked by your firewall, and forward by your router's NAT).</li>
+    <li><a href="https://github.com/Qirky/Troop#running-the-troop-client">Run the Troop Client Locally</a></li>
+    <li>Register your Troop Server <a [routerLink]="['/troops']">here</a>.</li>
+  </ol>
+  <p>
+    Once your Troop is running and registered, your collaborators will be able to find and join the Troop here without installing anything. For your collaborators to be able to hear the results you will need to join a Zoom Call, Google Meet, or other internet video chat option <strong>and share your computer audio</strong>.
+  </p>
+</section>

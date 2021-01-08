@@ -1,0 +1,50 @@
+@import '/src/_variables';
+
+:host ::ng-deep #sonic_pi_help_panel {
+  height: 100%;
+
+  #help_container {
+    height: 100%;
+    flex: 1 1 auto;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  mat-tab-group {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 10px;
+    row-gap: 10px;
+
+    border-right: 2px solid lightgray;
+
+    .mat-tab-body-wrapper {
+      border: 1px solid lightgray;
+    }
+
+    .mat-tab-label {
+      opacity: 1;
+      height: unset;
+      padding: 4px 16px;
+      min-width: unset;
+      color: white;
+      background-color: $primary;
+
+      &.mat-tab-label-active {
+        background-color: $accent;
+      }
+    }
+  }
+
+  mat-list-option {
+    height: unset;
+
+    .mat-list-item-content {
+      padding: 2px 8px;
+    }
+  }
+}

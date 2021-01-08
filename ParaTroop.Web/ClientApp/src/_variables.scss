@@ -1,0 +1,50 @@
+@import '~@angular/material/theming';
+
+$sonic-pi-pink: (
+    50 : #ffe0f2,
+    100 : #ffb3df,
+    200 : #ff80ca,
+    300 : #ff4db5,
+    400 : #ff26a5,
+    500 : #ff0095,
+    600 : #ff008d,
+    700 : #ff0082,
+    800 : #ff0078,
+    900 : #ff0067,
+    A100 : #ffffff,
+    A200 : #fff2f7,
+    A400 : #ffbfd5,
+    A700 : #ffa6c4,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$primary-palette: mat-palette($mat-gray);
+$accent-palette: mat-palette($sonic-pi-pink);
+$warn-palette: $mat-orange;
+
+$primary: mat-color($primary-palette);
+$primary-lighten: scale_color($primary, $lightness: 20%);
+$primary-lighten-2: scale_color($primary, $lightness: 40%);
+$accent: mat-color($accent-palette);
+$accent-lighten: scale_color($accent, $lightness: 20%);
+$accent-lighten-2: scale_color($accent, $lightness: 40%);
+$warn: mat-color($warn-palette);
+
+$alternate: #0366d6;
+$alternate-lighten: scale_color($alternate, $lightness: 40%);
+$alternate-lighten-2: scale_color($alternate, $lightness: 80%);

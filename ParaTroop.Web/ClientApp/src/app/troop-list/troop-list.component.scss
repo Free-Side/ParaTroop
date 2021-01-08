@@ -1,0 +1,24 @@
+
+#troop_list_container {
+  max-width: 600px;
+  box-sizing: border-box;
+
+  #troop_list_table {
+    width: 100%;
+  }
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.action-button-container {
+  max-width: 600px;
+  position: relative;
+
+  .action-button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}

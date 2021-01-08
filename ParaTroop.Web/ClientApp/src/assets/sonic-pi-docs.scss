@@ -1,0 +1,123 @@
+@import '/src/_variables';
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+  p, td, li, pre, code {
+    line-height: 1.4;
+  }
+}
+
+p.usage + pre {
+  border: 1px solid $accent;
+  padding: 1rem;
+
+  &::before {
+    content: '# Usage';
+    display: block;
+    font-family: monospace;
+    font-size: 16px;
+    color: gray;
+    font-style: italic;
+  }
+}
+
+code {
+  font-size: 16px;
+}
+
+h1 {
+  background-color: $accent;
+  color: white;
+  padding: 0 4px;
+}
+
+h2 {
+  background-color: $alternate;
+  color: white;
+  padding: 0 4px;
+}
+
+a, a:visited {
+  color: $alternate-lighten;
+  text-decoration: none;
+  font-style: italic;
+}
+
+table.arguments {
+  td {
+    padding: 4px;
+
+    &.even {
+      background-color: $primary;
+      color: white;
+
+      a {
+        color: white;
+      }
+    }
+
+    &.odd {
+      background-color: lightgray;
+      display: block;
+      margin-right: 10px;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    font-style: normal;
+  }
+}
+
+table.details {
+  td {
+    padding: 0.5rem;
+    vertical-align: top;
+
+  }
+
+  td.key {
+    font-family: monospace;
+    font-size: 16px;
+  }
+
+  td.even.key {
+    background-color: $alternate-lighten-2;
+  }
+
+  td.even:not(.key) {
+    background-color: lightgray;
+  }
+
+  td.odd.key {
+    background-color: $alternate-lighten;
+  }
+
+  td.odd:not(.key) {
+    background-color: scale_color(lightgray, $lightness: 40%);
+  }
+}
+
+table.examples {
+  td.head {
+    font-family: monospace;
+    font-size: 16px;
+    color: gray;
+    font-style: italic;
+  }
+
+  td:first-child {
+    display: block;
+    margin-right: 1rem;
+  }
+
+  td:nth-child(2) {
+    color: gray;
+    font-style: italic;
+  }
+
+  tr {
+    vertical-align: top;
+  }
+}

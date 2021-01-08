@@ -1,0 +1,113 @@
+/* default */
+.box pre {
+  color: white;
+}
+
+.CodeMirror-gutter-elt {
+  font-style: italic;
+}
+
+/* e.g. var, function */
+.cm-s-sonic-pi .cm-keyword {
+  color: orange;
+}
+
+/* e.g. #id */
+.cm-s-sonic-pi .cm-atom {
+  color: #ff4081;
+}
+
+/* e.g. 20 */
+.cm-s-sonic-pi .cm-number {
+  color: dodgerblue;
+}
+
+/* e.g. px, em */
+.cm-s-sonic-pi .cm-unit {
+  color: #555;
+}
+
+/* e.g. @include, [this] */
+.cm-s-sonic-pi .cm-def {
+  color: #555;
+}
+
+/* e.g. $, i */
+.cm-s-sonic-pi .cm-variable {
+  color: #555;
+}
+
+/* e.g. for key in [this], Markdown li */
+.cm-s-sonic-pi .cm-variable-2 {
+  color: #555 ;
+}
+
+.cm-s-sonic-pi .cm-variable-3 {
+  color: #000;
+}
+
+/* e.g. getElementbyId, CSS properties */
+.cm-s-sonic-pi .cm-property {
+  color: #555 ;
+}
+
+/* e.g. CoffeeScript ->, CSS colons */
+.cm-s-sonic-pi .cm-operator {
+  color: #555;
+}
+
+/* e.g. // comments */
+.cm-s-sonic-pi .cm-comment {
+  color: #999;
+  font-style: italic;
+}
+
+/* e.g. "string" */
+.cm-s-sonic-pi .cm-string {
+  color: limegreen;
+}
+
+/* e.g. some CSS values */
+.cm-s-sonic-pi .cm-string-2 {
+  color: #555;
+}
+
+/* e.g. @font-face */
+.cm-s-sonic-pi .cm-meta {
+  color: #555;
+}
+
+/*  */
+.cm-s-sonic-pi .cm-header {
+  color: #555;
+}
+
+/* e.g. HTML elements */
+.cm-s-sonic-pi .cm-tag {
+  color: #555;
+}
+
+/* e.g. class="" id="" */
+.cm-s-sonic-pi .cm-attribute {
+  color: #555;
+}
+
+/* not sure if used */
+.cm-s-sonic-pi .cm-strong {
+  color: #555;
+}
+
+/* not sure if used */
+.cm-s-sonic-pi .cm-em {
+  color: #555;
+}
+
+/* e.g. .box */
+.cm-s-sonic-pi .cm-qualifier {
+  color: #555;
+}
+
+/* not sure if used */
+.cm-s-sonic-pi .cm-builtin {
+  color: #555;
+}

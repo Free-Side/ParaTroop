@@ -1,0 +1,48 @@
+<mat-card id="troop_list_container" *ngIf="troopList">
+  <mat-card-title>
+    Existing Troops
+  </mat-card-title>
+  <mat-card-content>
+    <table id="troop_list_table" mat-table [dataSource]="troopList">
+      <!-- Troop Name -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let troop">{{troop.name}}</td>
+      </ng-container>
+
+      <!-- Join Button -->
+      <ng-container matColumnDef="join">
+        <th mat-header-cell *matHeaderCellDef class="text-align-right">
+          <mat-form-field>
+            <mat-label>Filter</mat-label>
+            <input
+              matInput [(ngModel)]="troopFilter"
+              (keyup)="applyFilter()"
+              placeholder="Troop Name"
+              autocomplete="off" />
+          </mat-form-field>
+        </th>
+        <td mat-cell *matCellDef="let troop" class="text-align-right">
+          <a [routerLink]="['/troops', troop.id]" mat-raised-button color="accent">Join ></a>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="['name', 'join']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['name', 'join'];"></tr>
+
+      <!-- Row shown when there is no matching data. -->
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No Troops match the name filter: "{{troopFilter}}"</td>
+      </tr>
+    </table>
+  </mat-card-content>
+</mat-card>
+<div class="action-button-container">
+  <button mat-fab
+    (click)="registerTroop()"
+    color="accent"
+    aria-label="Register a new Troop."
+    class="action-button">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

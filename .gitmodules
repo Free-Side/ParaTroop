@@ -1,0 +1,8 @@
+[submodule "ruby-coreaudio"]
+	path = ruby-coreaudio
+	url = git@github.com:sflanker/ruby-coreaudio.git
+	branch = para-troop
+[submodule "sonic-pi"]
+	path = sonic-pi
+	url = git@github.com:sflanker/sonic-pi.git
+	branch = para-troop
